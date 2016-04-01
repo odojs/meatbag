@@ -1,0 +1,23 @@
+{
+  "name": "meatbag",
+  "version": "0.1.0",
+  "description": "Humanise all the strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odojs/meatbag.git"
+  },
+  "keywords": [
+    "humanize",
+    "humanise"
+  ],
+  "author": "Thomas Coats <github@voodoolabs.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/odojs/meatbag/issues"
+  },
+  "homepage": "https://github.com/odojs/meatbag#readme"
+}
