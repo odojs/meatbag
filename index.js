@@ -12,5 +12,14 @@ module.exports = {
       return ns + " " + singular;
     }
     return ns + " " + plural;
+  },
+  oxford: function(array) {
+    if (array.length === 0) {
+      return '';
+    } else if (array.length === 1) {
+      return array[0];
+    } else {
+      return (array.slice(0, -1).join(', ')) + " and " + array[array.length - 1];
+    }
   }
 };
