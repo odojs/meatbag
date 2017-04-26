@@ -6,9 +6,12 @@ module.exports =
     return "#{ns} #{singular}" if n is 1
     "#{ns} #{plural}"
   oxford: (array) ->
-    if array.length is 0
-      ''
-    else if array.length is 1
-      array[0]
-    else
-      "#{array[0..-2].join ', '} and #{array[array.length - 1]}"
+    return array if array.length <= 1
+    result = []
+    for item, index in array
+      result.push item
+      if index < array.length - 2
+        result.push ', '
+      else if index is array.length - 2
+        result.push ' and '
+    result

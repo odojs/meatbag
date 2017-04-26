@@ -14,12 +14,20 @@ module.exports = {
     return ns + " " + plural;
   },
   oxford: function(array) {
-    if (array.length === 0) {
-      return '';
-    } else if (array.length === 1) {
-      return array[0];
-    } else {
-      return (array.slice(0, -1).join(', ')) + " and " + array[array.length - 1];
+    var i, index, item, len, result;
+    if (array.length <= 1) {
+      return array;
     }
+    result = [];
+    for (index = i = 0, len = array.length; i < len; index = ++i) {
+      item = array[index];
+      result.push(item);
+      if (index < array.length - 2) {
+        result.push(', ');
+      } else if (index === array.length - 2) {
+        result.push(' and ');
+      }
+    }
+    return result;
   }
 };
